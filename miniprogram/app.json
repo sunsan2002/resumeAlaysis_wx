@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/index",
+	  "pages/talentPool/index",
+    "pages/message/index",
+	  "pages/dataWatch/index",
+    "pages/index/index",
+    "pages/resumePage/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#222222",
+    "navigationBarTitleText": "云简智能",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#6873E3",
+    "backgroundColor": "#fff",
+    
+		"list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/tab1.png",
+        "selectedIconPath": "images/tab2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/talentPool/index",
+        "iconPath": "images/tab3.png",
+        "selectedIconPath": "images/tab4.png",
+        "text": "人才库"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "iconPath": "images/tab5.png",
+        "selectedIconPath": "images/tab6.png",
+        "text": "消息通知"
+      },
+      {
+        "pagePath": "pages/dataWatch/index",
+        "iconPath": "images/tab7.png",
+        "selectedIconPath": "images/tab8.png",
+        "text": "数据看板"
+      }
+		]
+	},
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

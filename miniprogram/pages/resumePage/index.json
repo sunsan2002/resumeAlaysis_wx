@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-button": "@vant/weapp/button/index",
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

@@ -1,0 +1,344 @@
+/* pages/talentPool/index.wxss */
+
+
+page{
+	background-color: rgb(242, 247, 252);
+	padding: 0;
+	padding-bottom: 200rpx;
+	margin: 0;
+  }
+  .board1 {
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	height: auto;
+	padding: 20rpx;
+	justify-content: flex-start;
+  }
+
+  .board1 button{
+	  font-size: 27rpx;
+	  margin: 0;
+	  color: rgb(163, 0, 0);
+  }
+  .input-class {
+	 border-radius: 10rpx;
+  }
+  .field-class{
+	  width: 80%;
+	  text-align: left;
+	  padding: 0px;
+    padding: var(--search-padding,10px 12px);
+
+  }
+
+  .field-class .van-search__input {
+	padding: 0;
+  }
+  
+  .field-class .van-search__input-wrapper {
+	padding: 0;
+  }
+  
+  .field-class.input-class{
+	  text-align: left;
+	  border-radius: 30rpx;
+  }
+
+  .pop{
+	  padding: 40rpx 20rpx;
+  }
+
+  .contain>h1{
+	  font-weight: bold;
+		color: #333;
+  }
+
+  .button-view{
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  margin-top: 50rpx;
+  }
+  .button1{
+	  background-color: #07C160;
+	  color: #fff;
+	  border-radius: 30rpx;
+	  font-size: 25rpx;
+	  height: 60rpx;
+	  width: 250rpx;
+  }
+  .button2{
+	  border: 1px solid rgb(192, 192, 192);
+	  color: #333;
+	  border-radius: 30rpx;
+	  font-size: 25rpx;
+	  height: 60rpx;
+	  width: 250rpx;
+  }
+  .main{
+	  margin-top: 30rpx;
+	  margin-bottom: 200rpx;
+  }
+  .button-contain{
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  float: left ;
+	  gap: 10rpx;
+	  font-size: 22rpx;
+	  gap: 20rpx;
+	  padding: 20rpx;
+  }
+  .button-contain checkbox{
+	  width: 200rpx;
+	  margin-top: 10rpx;
+  }
+  .labels{
+	  background-color: #E5F5FF;
+	  color: #2481bb;
+	  height: 25rpx;
+	  width: auto;
+	  font-size: 18rpx;
+  }
+.noselected{
+	float: left;
+	width: 200rpx;
+	background-color: #F5F7FA;
+	border-radius: 40rpx;
+	font-size:22rpx;
+	margin-top: 15rpx;
+}
+.selected{
+	color: #6EB1CC;
+	background-color: #E6F8FE;
+	float: left;
+	width: 200rpx;
+	border-radius: 40rpx;
+	font-size:22rpx;
+	margin-top: 15rpx;
+}
+  /* .button-contain button:active,
+  .button-contain button:focus{
+	background-color: #E6F8FE;
+	border:1px solid #6CB1CB;
+} */
+  .input-view{
+	  display: flex;
+	  flex-direction: row;
+	  gap: 30rpx;
+	  padding: 40rpx;
+	  align-items: center;
+	  justify-content: space-evenly;
+  }
+  .input-view>input{
+	  padding: 10rpx;
+	border-radius: 30rpx;
+	width: 200rpx;
+	background-color: #F5F7FB;
+	text-align: center;
+	color: rgb(90, 90, 90);
+	font-size: 22rpx;
+  }
+  .searchTerm {
+	width: 100%;
+	border: 5rpx solid #b7bbec;
+	border-right: none;
+	padding: 0rpx;
+	height: 70rpx;
+	box-sizing: border-box;
+	border-radius: 10rpx 0 0 10rpx;
+	outline: none;
+	color: #9dbfaf;
+	font-size: 20rpx;
+	text-indent: 10rpx;
+  }
+  .line{
+	  background-color: rgb(221, 221, 221);
+	  border: 0;
+	  height: 4rpx;
+	  width: 50rpx;
+  }
+  .searchTerm:focus {
+	color: rgb(141, 148, 235);
+  }
+
+ 
+
+
+  
+  .searchButton {
+	width: 110rpx;
+	height: 70rpx;
+	border: 1rpx solid #b7bbec;
+	background: #b7bbec;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 5rpx 5rpx 0;
+	cursor: pointer;
+	padding: 0px;
+  }
+
+  .searchButton:hover {
+	background: #8991ec;
+  }
+  .searchButton>image{
+	  height: 35rpx;
+	  width: 35rpx;
+	  margin-left: -10rpx;
+	  margin-top: -10=5rpx;
+  }
+  
+.so_condition {
+	width: 96%;
+	margin-left: 2%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 20rpx;
+	border: 1rpx #eeeeee solid;
+	padding-top: 0rpx;
+	padding: 7rpx;
+	padding-bottom: 20rpx;
+	background-color: #fff;
+  }
+  .so_condition .lefttit {
+	width: 90rpx;
+	font-size: 23rpx;
+	font-weight: 900;
+	padding-right: 15rpx;
+	float: left;
+	text-align: right;
+	padding-top: 8rpx;
+	margin-top: 15rpx;
+  }
+  
+  .so_condition .rs {
+	width: 100%;
+	margin-top: 8rpx;
+	float: left;
+  }
+  
+  .so_condition .rs .li {
+	cursor: pointer;
+	padding-left: 10rpx;
+	padding-right: 10rpx;
+	height: 22rpx;
+	line-height: 26rpx;
+	float: left;
+	border: 1rpx #ffffff solid;
+	background-color: #ffffff;
+	border-radius: 3rpx;
+	font-size: 20rpx;
+	margin-top: 5rpx;
+  }
+  .so_condition .rs .li:hover {
+	color: #a75b5b;
+	border: 1rpx #a75b5b solid;
+	background-color: #d6cdcd;
+  }
+  .clear {
+	clear: both;
+	height: 0rpx;
+	font-size: 0rpx;
+	line-height: 0rpx;
+  }
+  
+  .so_condition .rs .bli {
+	height: 30rpx;
+	line-height: 30rpx;
+	margin-right: 25rpx;
+	float: left;
+	cursor: pointer;
+	margin-top: 3rpx;
+  }
+  .so_condition .rs .li.select {
+	  border: 1rpx #FF6600 solid;
+	  background-color: #FFF7EE;
+	  color: #FF6600;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  form,
+  p,
+  ul,
+  input {
+	margin: 0px;
+	padding: 0px;
+  }
+  ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0rpx;
+	margin-inline-end: 0rpx;
+	padding-inline-start: 40rpx;
+  }
+  .van-dropdown-menu{
+	  height: 60rpx;
+  }
+  .postings {
+	width: 100%;
+	float: left;
+	text-align: left;
+	margin-top: 30rpx;
+	padding: 20rpx 30rpx;
+	background-color: #fff;
+  }
+  .leftPart {
+	width: 78%;
+	float: left;
+  }
+  .single-posting {
+	display: block;
+	margin-bottom: 20rpx;
+  }
+  .names {
+	  font-weight: bold;
+	margin-right: 20rpx;
+	display: inline-block;
+	font-size: 25rpx;
+  }
+  .posting-detail {
+	margin-bottom: 0rpx;
+	margin-top: -23rpx;
+	color: rgb(87, 87, 87);
+	font-size: 21rpx;
+	margin-bottom: 3rpx;
+	line-height: 30rpx;
+  }
+  .single-posting {
+	display: block;
+	margin-bottom: 20rpx;
+  }
+  .post {
+	color: #118db9;
+	display: inline-block;
+	font-size: 25rpx;
+  }
+  .label {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 600;
+	font-size: 21rpx;
+	margin-left: 10rpx;
+	color: #fff;
+  }
+  .label-full-time {
+	background: #239e9a;
+  }
+  .rightPart {
+	width: 22%;
+	float: right;
+  }
+
+  .rightPart>image{
+	  height: 100rpx;
+	  width: 100rpx;
+	  margin-left: 10rpx;
+	  margin-bottom: 22rpx;
+
+  }

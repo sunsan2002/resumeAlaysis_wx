@@ -1,0 +1,49 @@
+<!--pages/home/index.wxml-->
+<view class="box">
+	<view class="top">
+		<image src="/images/PAGE2.png" mode="scaleToFill"></image>
+		<text class="text1">云简智能</text>
+		<text class="text2">人工智能时代，用 AI 为招聘赋能</text>
+	</view>
+	<view class="item-box">
+		<view class="stack-pic">
+			<navigator class="stack-single-component" style="background-color: rgba(215, 130, 217, 0.2);">
+				<image src="https://www.xiaoxizn.com/products/portrait.svg"></image>
+				<text>候选人画像</text>
+			</navigator>
+			<text class="introduce">多维度刻画人物形象以及人物标签,方便企业更好地对人才库进行管理。</text>
+		</view>
+		<view class="stack-pic">
+			<navigator class="stack-single-component" style="background-color: #FFE4CC;">
+				<image src="https://www.xiaoxizn.com/products/search.svg"></image>
+				<text>人才搜索</text>
+			</navigator>
+			<text class="introduce">企业经过标签筛选以及搜索和评分更有效的定位最符合要求的候选人列表。</text>
+		</view>
+		<view class="stack-pic">
+			<navigator class="stack-single-component" style="background-color: #D9F6EA;">
+				<image src="https://www.xiaoxizn.com/products/recommender.svg"></image>
+				<text>人岗匹配</text>
+			</navigator>
+			<text class="introduce">自动快速，精准匹配最合适的岗位人选。</text>
+		</view>
+		<view class="stack-pic">
+			<navigator class="stack-single-component" style="background-color: #EDE8FB;">
+				<image src="https://www.xiaoxizn.com/products/kg.svg"></image>
+				<text>知识图谱</text>
+			</navigator>
+			<text class="introduce">结合外部知识库打造最适合企业的招聘领域知识库</text>
+		</view>	
+		<view style="display: flex;flex-direction: row;" class="stack-pic">
+			<navigator class="stack-single-component" style="background-color: #E1E3FA;width: 45%;">
+				<image src="https://www.xiaoxizn.com/products/parser.svg"></image>
+				<text>简历解析</text>
+			</navigator>
+			<navigator class="stack-single-component" style="background-color: #D2E4F9;width: 45%;">
+				<image src="https://www.xiaoxizn.com/products/job.svg"></image>
+				<text>职位解析</text>
+			</navigator>
+		</view>
+	</view>
+
+</view>

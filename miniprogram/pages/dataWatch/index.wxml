@@ -1,0 +1,36 @@
+<!--pages/dataWatch/index.wxml-->
+<view>
+	<view class="container1">
+		<h4>简历总体情况</h4>
+		<view class="container-num">
+			<view class="num-box">
+			<text>投递数</text>
+			<text class="num-p">412</text>
+			</view><view class="num-box">
+			<text>上传数</text>
+			<text class="num-p">350</text>
+			</view><view class="num-box">
+			<text>解析数</text>
+			<text class="num-p">350</text>
+			</view>
+		</view>
+		<view style="height: 400rpx;width: 680rpx;margin-top: -100rpx;">
+		<ec-canvas class="ec-canvas1" id="chart-dom-line" canvas-id="chart-dom-line" ecData="{{chartData}}" ec="{{ec}}"></ec-canvas></view>
+	</view>
+	<view class="container2">
+		<h4>人才分布</h4>
+		<!--pages/index/index.wxml-->
+		<view class="view1">
+			<ec-canvas id="chart-dom-pie" canvas-id="chart-dom-pie" ec="{{ ec }}"></ec-canvas>
+		</view>
+		<view class="view2">
+			<ec-canvas id="chart-dom-line2" canvas-id="chart-dom-line2" ec="{{ ec }}"></ec-canvas>
+		</view>
+		<view class="view3">
+			<ec-canvas id="chart-dom-half-donut" canvas-id="chart-dom-half-donut" ec="{{ ec }}"></ec-canvas>
+		</view>
+		<view class="view4">
+			<ec-canvas id="chart-dom-donut" canvas-id="chart-dom-donut" ec="{{ ec }}"></ec-canvas>
+		</view>
+	</view>
+</view>

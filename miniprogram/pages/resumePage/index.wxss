@@ -1,0 +1,313 @@
+/* pages/resumePage/index.wxss */
+page {
+  margin: 0;
+  padding: 27rpx;
+  background-color: #f3fcfa;
+}
+.board1 {
+  width: 88%;
+  padding: 30rpx 20rpx;
+  height: auto;
+  box-shadow: 14rpx 12rpx 24rpx -6rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.icon-view {
+  padding: 20rpx 0rpx;
+  display: flex;
+  flex-direction: row;
+}
+.avatar image {
+  height: 80rpx;
+  width: 80rpx;
+}
+.avatar {
+  display: flex;
+  flex-direction: row;
+  gap: 30rpx;
+  padding: 20rpx;
+}
+.user-tip {
+  display: flex;
+  flex-direction: row;
+}
+.user-tip > h2 {
+  margin-right: 28rpx;
+  font-weight: bold;
+}
+.user-msg {
+  color: #848484;
+  font-size: 18rpx;
+  margin-top: 15rpx;
+}
+.user-msg image {
+  height: 15rpx;
+  width: 17rpx;
+}
+.tag-view {
+  display: flex;
+  flex-direction: row;
+  gap: 10rpx;
+}
+.container {
+  box-sizing: border-box;
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.ul-list li::marker {
+  color: #6873e3;
+}
+ul li {
+  margin-bottom: 15rpx;
+  font-size: 20rpx;
+  color: #232323;
+}
+.mark {
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.ul-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600rpx;
+}
+.ul-list li {
+  width: 50%;
+}
+
+ul li > span:first-child {
+  color: #7d7d7d;
+  font-size: 19rpx;
+}
+
+ul {
+  padding: 10rpx;
+}
+.container view view > span:first-child {
+  font-weight: bold;
+  font-size: 19rpx;
+  margin-top: 20rpx;
+  margin-left: -10rpx;
+}
+.container view view > span:nth-child(2) {
+  color: #626262;
+  float: right;
+  font-size: 13rpx;
+}
+.container > view > span {
+  font-size: 25rpx;
+  background: linear-gradient(to right, #6873e3, rgb(39, 49, 158));
+  -webkit-background-clip: text;
+  font-weight: bold;
+  color: transparent;
+  margin-left: -15rpx;
+  margin-bottom: 15rpx;
+  display: block;
+}
+
+ul:not(.ul-list) {
+  list-style: none;
+  margin-left: -20rpx;
+}
+ul:not(.ul-list) li {
+  display: block;
+}
+.light-contain ul li::marker {
+  color: #fbe78e;
+}
+
+.labels image {
+  height: 25rpx;
+  width: 25rpx;
+}
+.predict-contain ul li::marker {
+  color: #68a2fd;
+}
+.labels span {
+  font-size: 23rpx;
+  color: #333;
+}
+.labels {
+  display: flex;
+  flex-direction: row;
+  gap: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: -15rpx;
+}
+.predict-contain ul li::marker {
+  color: #68a2fd;
+}
+.warn-contain ul li::marker {
+  color: #ffa625;
+}
+.point {
+  border-radius: 50%;
+  height: 10rpx;
+  width: 10rpx;
+}
+.predict-contain ul li,
+.warn-contain ul li,
+.light-contain ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15rpx;
+}
+.tags view > span {
+  color: #333;
+  font-size: rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.tags view view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.btn {
+	border-radius: 60rpx;
+	margin: 0;
+	margin-right: 12rpx;
+	background-color: #ECF5FF;
+	border: 1px solid #409EFF;
+	color: #409EFF;
+	font-size: 20rpx;
+	margin-bottom: 13rpx;
+	height: 50rpx;
+  }
+  .btn:active{
+	  color: #fff;
+	  background-color: #409EFF;
+  }
+  .btn1 {
+	border-radius: 60rpx;
+	margin: 0;
+	margin-right: 12rpx;
+	background-color: #F0F9EB;
+	border: 1px solid #67C23A;
+	color: #67C23A;
+	font-size: 20rpx;
+	margin-bottom: 13rpx;
+	height: 50rpx;
+  }
+  .btn1:active{
+	  color: #fff;
+	  background-color: #67C23A;
+  }
+  .btn2 {
+	border-radius: 60rpx;
+	margin: 0;
+	margin-right: 12rpx;
+	background-color: #FEF0F0;
+	border: 1px solid #F56C6C;
+	color: #F56C6C;
+	font-size: 20rpx;
+	margin-bottom: 13rpx;
+	height: 50rpx;
+  }
+  .btn2:active{
+	  color: #fff;
+	  background-color: #F56C6C;
+  }
+  .btn3 {
+	border-radius: 60rpx;
+	margin: 0;
+	margin-right: 12rpx;
+	background-color: #EFF0FD;
+	border: 1px solid #626AEF;
+	color: #626AEF;
+	font-size: 20rpx;
+	margin-bottom: 13rpx;
+	height: 50rpx;
+  }
+  .btn3:active{
+	  color: #fff;
+	  background-color: #626AEF;
+  }
+  .btn4 {
+	border-radius: 60rpx;
+	margin: 0;
+	margin-right: 12rpx;
+	background-color: #FDF6EC;
+	border: 1px solid #E6A23C;
+	color: #E6A23C;
+	font-size: 20rpx;
+	margin-bottom: 13rpx;
+	height: 50rpx;
+  }
+  .btn4:active{
+	  color: #fff;
+	  background-color: #E6A23C;
+  }
+  .view1{
+	height: 10rpx;
+	width: 10rpx;
+	padding: 30rpx;
+	padding: 12% 17%;
+}
+.view2{
+	height: 10rpx;
+	width: 10rpx;
+	padding: 80rpx;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+  transition: all 0.3s ease-out; /* 添加动画过渡效果 */
+  margin-left: 15px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal {
+  position: relative;
+  width: 400px;
+  max-width: 80%;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.open-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.open-btn:hover, .close-btn:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.schoolBtn{
+  background-color: #6873E3;
+  color: #fff;
+  font-size:23rpx;
+  width: 50%;
+}

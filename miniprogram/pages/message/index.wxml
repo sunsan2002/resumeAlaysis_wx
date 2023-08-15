@@ -1,0 +1,55 @@
+<!--pages/message/index.wxml-->
+<view>
+	<van-tabs line-height="5px" style="height: 50rpx;" active="{{ active }}" color="#6873E3" bind:change="onChange" swipeable animated>
+		<van-tab title="未读消息">
+			<view class="container1">
+				<view wx:for="{{noreadMessage}}" wx:key="index" class="message">
+					<text>{{item.createTime}}</text>
+					<view class="text-aside">
+						<text>{{item.msg}}</text>
+						<button data-index="{{index}}" data-id="{{item.id}}" bindtap="read">标为已读</button>
+					</view>
+				</view>
+				<button class="btn" style="float: left;" bindtap="readAll">全部标为已读</button>
+			</view>
+		</van-tab>
+		<van-tab title="已读消息">
+			<view class="container1">
+				<view wx:for="{{readMessage}}" wx:key="index" class="message">
+					<text>{{item.createTime}}</text>
+					<view class="text-aside">
+						<text>{{item.msg}}</text>
+						<button class="delete-dtn" data-index="{{index}}" bindtap="delete">删除</button>
+					</view>
+				</view>
+				<button class="delete-btn" bindtap="deleteAll" style="float: left;">清空全部消息</button>
+			</view>
+		</van-tab>
+		<van-tab title="日志">
+			<view class="container1">
+				<view wx:if="{{logs.length==0}}" class="null">
+					暂无日志查看
+				</view>
+				<view wx:else class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2" style="padding: 30px 80px">
+					<ul class="timeline">
+						<li class="timeline-item" wx:for="{{logs}}" wx:key="index">
+							<view>
+								<span>{{ item.time }}</span>
+							</view>
+							<view class="timeline-marker"></view>
+							<view class="timeline-content">
+								<h3 class="timeline-title">{{ nodeStatus[item.action] }}</h3>
+								<view>
+									<p>
+										{{ item.detail }}
+									</p>
+								</view>
+							</view>
+						</li>
+					</ul>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+
+</view>

@@ -1,0 +1,111 @@
+/* pages/message/index.wxss */
+page{
+	margin: 0;
+	padding: 0;
+	background-color: #ECF3FA;
+}
+.container1{
+	display: flex;
+	flex-direction: column;
+	padding: 20rpx;
+	gap: 20rpx;
+}
+.message{
+	display: flex;
+	flex-direction: column;
+	min-height: 130rpx;
+	padding: 15rpx;
+	box-sizing: border-box;
+	text-align: left;
+	margin-top: 5rpx;
+	background-color: #fff;
+	font-size: 22rpx;
+	color: #333;
+}
+.text-aside{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.text-aside text{
+	font-size: 25rpx;
+	font-weight: bold;
+	width: 80%;
+}
+.btn{
+	font-size: 20rpx;
+	background-color: #6873e3;
+	color: #fff;
+	margin-top: 20rpx;
+	margin-left: 0;
+}
+.btn:active{
+	background-color: #7d86e6;
+}
+.text-aside button{
+	font-size: 20rpx;
+	background-color: #6873e3;
+	color: #fff;
+	padding: 0;
+	height: 50rpx;
+	width: 110rpx;
+}
+.text-aside button:active{
+	background-color: #7d86e6;
+}
+.delete-btn{
+	font-size: 20rpx;
+	background-color: rgb(238, 109, 109);
+	color: #fff;
+	margin-left: 0;
+	margin-top: 20rpx;
+}
+.delete-btn:active{
+	background-color: rgb(240, 63, 63);
+
+}
+.timeline {
+	line-height: 1.4em;
+	list-style: none;
+  }
+  
+  .timeline-item {
+	padding-left: 40px;
+	position: relative;
+  }
+  
+  .timeline-marker:before {
+	background: #ff6b6b;
+	border: 3px solid transparent;
+	border-radius: 100%;
+	content: "";
+	display: block;
+	height: 15px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 15px;
+  }
+  
+  .timeline-marker:after {
+	content: "";
+	width: 3px;
+	background: #ccd5db;
+	display: block;
+	position: absolute;
+	top: 20px;
+	bottom: 0;
+	left: 9px;
+  }
+  
+  .null{
+	font-weight: bold;
+  }
+  
+  .timeline-content {
+	padding-top: 20px;
+	padding-bottom: 40px;
+  }
+  .timeline-title {
+	margin-bottom: 10px;
+  }

@@ -1,0 +1,197 @@
+<!--pages/resumePage/index.wxml-->
+<view class="box">
+	<view class="icon-view">
+		<van-icon name="arrow-left" size="40rpx" />
+		<navigator url="/pages/talentPool/index" open-type="switchTab">返回</navigator>
+	</view>
+	<view class="board1">
+		<view class="avatar">
+			<image src="/images/avatar.png"></image>
+			<view>
+				<view class="user-tip">
+					<h2>{{resume.fullName||'张晓鹏'}}</h2>
+					<!-- <view class="tag-view">
+						<van-tag type="primary" wx:for="{{state1.lights}}" wx:key="{{index}}">{{item}}</van-tag>
+						<van-tag type="warning" wx:for="{{state1.warns}}" wx:key="{{index}}">{{item}}</van-tag>
+					</view> -->
+				</view>
+				<view class="user-msg">
+					<van-icon name="phone-o" />
+					<span>{{reusme.phone||'12542367443'}} </span>
+					<van-icon name="envelop-o" />
+					<span>{{resume.email||'2390864551@qq.com'}} </span>
+					<van-icon name="bag" />
+					<span>{{userMsg.workYears||'5'}}年工作经验 </span>
+					<image src="/images/student-icon.png" />
+					<span>{{userMsg.education||"本科"}}</span>
+				</view>
+			</view>
+		</view>
+		<van-tabs line-height="5px" active="{{ active }}" color="#6873E3" bind:change="onChange" swipeable animated>
+			<van-tab title="中文简历">
+				<view class="container">
+					<view>
+						<span class="title">基本信息</span>
+						<ul class="ul-list">
+							<li><span>姓名：</span>{{ userMsg.name||'张晓鹏' }}</li>
+							<li><span>邮箱：</span>{{ userMsg.mailBox||'2390864552@qq.com' }}</li>
+							<li><span>年龄：</span>{{ userMsg.age ? userMsg.age:24||'26' }}</li>
+							<li><span>求职方向：</span>{{ userMsg.expectedJob||'软件开发工程师' }}</li>
+							<li><span>手机：</span>{{ userMsg.phone||'12562429522' }}</li>
+							<li><span>学历：</span>{{ userMsg.education||'本科' }}</li>
+							<li><span>性别：</span>{{userMsg.sex ? userMsg.sex: '男'}}</li>
+							<li><span>出生年月：</span>{{ userMsg.dateOfBirth||'1990.12.8' }}</li>
+						</ul>
+					</view>
+					<view>
+						<span class="title" style="margin-bottom: -10rpx;">教育背景</span>
+						<view class="education">
+							<view class="education">
+								<view style="display: flex; flex-direction: row;align-items: center;">
+									<span class="m-2">{{ userMsg.graduationInstitution||'中国科学院大学' }}</span>
+									<image src="/images/mark02.png" class="circle" bindtap="updateShow" />
+									<view class="overlay" wx:if="{{showSchool}}">
+										<view class="modal">
+											<view class="graph-view">
+												<h2 style="margin-left: -10px">
+													{{ schoolList[0].replaceName||'中国科学院大学' }}
+												</h2>
+												<ul>
+													<li>
+														<span>学校名：</span>{{ schoolList[0].universityNode[0].chineseName||'中国科学院大学' }}
+													</li>
+													<li>
+														<span>缩写：</span>{{ schoolList[0].universityNode[0].simpleName||'国科大（UCAS）' }}
+													</li>
+													<li>
+														<span>英文名：</span>{{ schoolList[0].universityNode[0].foreignName||'University of Chinese Academy of Sciences' }}
+													</li>
+													<li><span>校训：</span>{{ schoolList[0].universityNode[0].schoolMotto||'厚德载物，自强不息' }}</li>
+													<li><span>奖项：</span>{{ schoolList[0].universityNode[0].awards||'SCI收录6707篇，EI收录1384篇（2014年）国家三大奖32项（2014年）ESI排名全国第一（2019年1月）' }}</li>
+													<li><span>水平：</span>{{ schoolList[0].universityNode[0].level||'公办大学' }}</li>
+													<li><span>地址：</span>{{ schoolList[0].universityNode[0].address||'中国北京市石景山区玉泉路19号（甲）' }}</li>
+													<li><span>学校类型：</span>{{ schoolList[0].universityNode[0].schoolType||'综合类 本科' }} {{ schoolList[0].universityNode[0].type }}</li>
+													<!-- <li><span>学校类型：</span>{{  schoolList[0].universityNode[0].schoolType }} {{  schoolList.universityNode[0].type }}</li> -->
+													<li><span>详细介绍：</span>{{ schoolList[0].universityNode[0].desc||'中国科学院大学（University of Chinese Academy of Sciences），简称“国科大”，主校区位于北京市，是一所以科教融合为办学模式、研究生教育为办学主体的创新型大学，入选国家“双一流”建设高校、“基础学科拔尖学生培养试验计划”，环太平洋大学联盟、京港大学联盟、中国高校行星科学联盟、中欧商校联盟成员，首批学位授权自主审核单位。[1-4]' }}</li>
+												</ul>
+												<button class="schoolBtn" bindtap="updateShow">确认</button>
+											</view>
+										</view>
+									</view>
+								</view>
+								<ul>
+									<li><span>学位：</span>{{ userMsg.education||'本科' }}</li>
+									<li><span>专业：</span>{{ userMsg.major||'软件工程' }}</li>
+									<li><span>学校名：</span>{{ userMsg.graduationInstitution||'中国科学院大学' }}</li>
+								</ul>
+							</view>
+						</view>
+					</view>
+					<view>
+						<span class="title" style="margin-bottom: 25rpx;">工作经历</span>
+						<div wx:for="{{userMsg.workExperiences}}" wx:key="index">
+							<span class="m-2" style="font-size: 20rpx;font-weight: bold;">{{ item.companyName||'建龙设计网科技公司' }}</span>
+							<ul>
+								<li><span>开始时间：</span>{{ item.startTime||'2018.08' }}</li>
+								<li><span>结束时间：</span>{{ item.endTime||'至今' }}</li>
+								<!-- <li><span>地点：</span>湘西土家族苗族自治州</li> -->
+								<li><span>公司名：</span>{{ item.companyName||'建龙设计网科技公司' }}</li>
+								<li><span>职位名称：</span>{{ item.jobName||"开发工程师" }}</li>
+								<li style="white-space: pre-line;text-indent: -5em; padding-left: 5em;">
+									<span>工作描述：</span>
+									{{ item.description }}
+								</li>
+							</ul>
+						</div>
+					</view>
+					<view>
+						<span class="title">项目经历</span>
+						<span style="font-size: 20rpx;color: black;font-weight: lighter;white-space: pre-line;">{{ userMsg.projectExperiences }}</span>
+				</view>
+	</view>
+	</van-tab>
+	<van-tab title="候选人画像">
+		<view class="container">
+			<view>
+						<span class="lights">简历亮点</span>
+						<view class="light-contain">
+							<view class="labels">
+								<image src="/images/icon02.png" />
+								<span style="font-size: 22rpx;">简历亮点</span>
+							</view>
+							<ul>
+								<li wx:for="{{userMsg.resumeHighlights}}" wx:key="index">
+									<view class="point" style="background-color: #fbe78e;"></view>{{ item }}
+								</li>
+							</ul>
+						</view>
+						<view class="predict-contain">
+							<view class="labels">
+								<image src="/images/icon04.png" />
+								<span style="font-size: 22rpx;">智能预测</span>
+							</view>
+							<ul>
+								<li wx:for="{{userMsg.intelligentPrediction}}" wx:key="index">
+									<view class="point" style="background-color: #68a2fd;"></view>{{ item }}
+								</li>
+							</ul>
+						</view>
+						<view class="warn-contain">
+							<view class="labels">
+								<image style="font-size: 20rpx;" src="/images/icon05.png" />
+								<span style="font-size: 22rpx;">风险提示</span>
+							</view>
+							<ul>
+								<li wx:for="{{userMsg.riskWarning}}" wx:key="index">
+									<view class="point" style="background-color: #ffa625;"></view>{{ item }}
+								</li>
+							</ul>
+						</view>
+					</view>
+			<view class="tags">
+				<span class="title">候选人标签</span>
+
+				<view>
+					<span>教育背景标签</span>
+					<view>
+						<button class="btn1" wx:for="{{labelProcessing.educationTags}}" wx:key="index" type="info">{{item}}</button>
+
+					</view>
+				</view>
+				<view>
+					<span>职业标签</span>
+					<view>
+						<button class="btn2" wx:for="{{labelProcessing.jobTags}}" wx:key="index" type="info">{{item}}</button>
+
+					</view>
+				</view>
+
+				<view>
+					<span>专业技能标签</span>
+					<view>
+						<button class="btn4" wx:for="{{labelProcessing.skillTags}}" wx:key="index" type="info">{{item}}</button>
+					</view>
+				</view>
+			</view>
+			<view>
+				<span>综合能力</span>
+			</view>
+			<image src="/images/6.png" mode="aspectFill"></image>
+			<view class="view1">
+				<ec-canvas id="chart-dom-donut" canvas-id="chart-dom-donut" ec="{{ ec }}"></ec-canvas>
+			</view>
+
+			<view>
+				<span>背景行业</span>
+				<image src="/images/2.png" mode="aspectFill"></image>
+				<view class="view2">
+					<ec-canvas id="chart-dom" canvas-id="chart-dom" ec="{{ ec }}"></ec-canvas>
+				</view>
+			</view>
+		</view>
+
+		<!-- </view> -->
+	</van-tab>
+	</van-tabs>
+</view>
+</view>

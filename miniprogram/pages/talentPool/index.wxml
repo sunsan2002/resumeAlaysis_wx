@@ -1,0 +1,97 @@
+<view class="box">
+  <view class="board1">
+    <button bindtap="search">
+      <van-icon style="color: #7A83E7;" size="19px" name="search" />
+    </button>
+    <input placeholder="请输入搜索关键词" value="{{searchValue.fullText}}" bindinput="updateSearchValue" style="background-color: rgb(243, 243, 243);padding: 8rpx;width: 75%;height: 30rpx;margin-top: 6rpx;" />
+    <!-- <van-search style="padding: 0px;" background="#F7F7F5" input-align="left" class="field-class" value="{{ searchValue }}" placeholder="请输入搜索关键词" /> -->
+  </view>
+  <view>
+    <van-dropdown-menu>
+      <van-dropdown-item  value="{{ value1 }}" bind:change="updateValue1" options="{{ option1 }}" />
+      <van-dropdown-item value="{{ value2 }}"  bind:change="updateValue2" options="{{ option2 }}" />
+      <van-dropdown-item value="{{ value3 }}"  bind:change="updateValue3" options="{{ option3 }}" />
+      <van-dropdown-item value="{{ value4 }}"  bind:change="updateValue4" options="{{ option4 }}" />
+      <!-- <button style="font-size: 28rpx;color: #333;margin-top: 12rpx;margin-right: 20rpx;"
+      bindtap="open"
+      >更多筛选</button> -->
+    </van-dropdown-menu>
+
+    <van-popup show="{{show}}" closeable position="top" custom-style="height: 60%" bind:close="onClose">
+      <view class="pop">
+        <view class="contain">
+          <h1>年龄设置</h1>
+          <view class="input-view">
+            <input type="text" placeholder="请输入最小值" value="{{ageText1}}" />
+            <view class="line"></view>
+            <input type="text" placeholder="请输入最大值" value="{{ageText2}}" />
+          </view>
+        </view>
+        <view class="contain">
+          <h1>期望薪资</h1>
+          <view class="input-view">
+            <input type="text" placeholder="请输入最小值" value="{{payText1}}" />
+            <view class="line"></view>
+            <input type="text" placeholder="请输入最大值" value="{{payText2}}" />
+          </view>
+        </view>
+        <view class="contain" style="margin-bottom: 100rpx;">
+          <h1>工作经验</h1>
+          <view class="button-contain">
+            <checkbox wx:for="{{workTime}}" wx:key="index">{{item.time}}</checkbox>
+         </view>
+        </view>
+        <view class="contain">
+          <h1>简历标签</h1>
+          <view class="button-contain">
+            <checkbox wx:for="{{tags}}" wx:key="index">{{item.name}}</checkbox>
+         </view>
+        </view>
+        <view class="contain">
+          <h1 style="margin-right: 100rpx;">性别要求</h1>
+          <radio name="sex" style="margin-right: 60rpx;">男</radio>
+          <radio name="sex">女</radio>
+        </view>
+        <view class="button-view">
+        <button class="button1" bindtap="close">确定</button>
+        <button class="button2" bindtap="close">取消</button>
+        </view>
+      </view>
+    </van-popup>
+  </view>
+  <view class="main">
+    <view wx:for="{{list}}" wx:key="index">
+        <!-- <view class="job-board-category">
+          <img class="job-img" :src="item.avatar" alt="暂无证件照" />
+        </view> -->
+        <view class="postings">
+          <view class="leftPart">
+            <view class="single-posting">
+            <view style="display: flex;flex-direction: row;">
+              <h2 class="names">{{ item.fullName }}</h2>
+
+              <!-- <view class="labels" wx:for="{{lights}}">{{lights[{{index}}]}}</view> -->
+              </view>
+
+              <view class="posting-detail">
+                <text>
+                  {{item.content.sex ? item.content.sex: '男'}} | {{ item.content.age||'26' }}岁 | {{ item.content.education||'本科' }} | {{ item.content.workYears||'5' }}年工作经验
+                </text>
+                <p>
+                  电话: {{ item.phone||'15648237828' }}  | 邮箱: {{ item.email||'2390864551@qq.com' }}
+                </p>
+              </view>
+            </view>
+            <view class="single-posting">
+              <view class="post">应聘岗位：{{ item.content.expectedJob||'软件开发工程师' }}</view>
+            </view>
+          </view>
+          <view class="rightPart">
+          <image src="/images/avatar.png"></image>
+            <navigator style="color: #6873E3;font-size: 21rpx;font-weight: bold;text-decoration: underline;" url='/pages/resumePage/index?id={{item.id}}' open-type="navigate">查看分析结果</navigator>
+          </view>
+        </view>
+      </view>
+  </view>
+
+</view>

@@ -1,0 +1,77 @@
+/* pages/home/index.wxss */
+
+.top{
+	margin-top: -40rpx;
+	margin-bottom: 20rpx;
+}
+.top image{
+	width: 750rpx;
+	height: 380rpx;
+}
+.box{
+	margin: 0;
+	padding: 0;
+}
+.text1{
+	font-weight: bold;
+	font-size: 40rpx;
+	position: absolute;
+	left: 60rpx;
+	top: 100rpx;
+}
+.text2{
+	position: absolute;
+	left: 60rpx;
+	top: 190rpx;
+}
+
+.container view{
+	display: flex;
+	flex-direction: column;
+}
+
+.stack-pic {
+    margin-right: 5%;
+	width: 600rpx;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 20rpx;
+    padding: 3rpx;
+    border-radius: 30rpx;
+    background-color: #fff;
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+}
+
+.stack-pic .stack-single-component {
+    width: 25%;
+    margin: 10rpx;
+    height: 140rpx;
+    background: rgba(67,211,148,.2);
+    border-radius: 30rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.item-box{
+	margin-left: 75rpx;
+	display: flex;
+	flex-direction: column;
+	gap: 30rpx;
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.introduce{
+	width: 65%;
+	font-size: 22rpx;
+}
+.stack-pic image{
+	height: 60rpx;
+	width: 60rpx;
+	margin-bottom: 20rpx;
+}
+
+.stack-pic text{
+	font-size: 20rpx;
+}
